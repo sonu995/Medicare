@@ -1,0 +1,134 @@
+.clinic-portal-page {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.portal-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portal-header h1 {
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.portal-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+}
+
+.register-doctor-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.register-doctor-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.portal-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.portal-card:hover {
+    transform: translateY(-5px);
+}
+
+.portal-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.portal-card-content h3 {
+    font-size: 1.4rem;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.portal-location {
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.portal-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.portal-stats span {
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 8px;
+    color: #475569;
+}
+
+.enter-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: auto;
+    transition: opacity 0.3s;
+}
+
+.enter-btn:hover {
+    opacity: 0.9;
+}
+
+.portal-footer {
+    margin-top: 60px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.master-admin-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0066ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.master-admin-link:hover {
+    text-decoration: underline;
+}

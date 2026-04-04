@@ -1,0 +1,1251 @@
+.ambulance-booking-page {
+  min-height: 100vh;
+  padding: 0;
+  background: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.ambulance-header {
+  background: #000;
+  padding: 15px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ambulance-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ambulance-header-icon {
+  font-size: 1.8rem;
+}
+
+.ambulance-header h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.ambulance-header p {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin: 0;
+  color: white;
+}
+
+.ambulance-header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Home Content */
+.home-content {
+  padding: 20px;
+}
+
+.emergency-home-card {
+  background: linear-gradient(135deg, #cc1100, #ff3333);
+  border-radius: 20px;
+  padding: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 25px rgba(204, 17, 0, 0.35);
+}
+
+.emergency-icon-wrapper {
+  width: 65px;
+  height: 65px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  animation: pulse-emergency 1.5s infinite;
+}
+
+@keyframes pulse-emergency {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.emergency-text {
+  flex: 1;
+}
+
+.emergency-text h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 0 5px;
+}
+
+.emergency-text p {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.emergency-arrow {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.normal-booking-card {
+  background: white;
+  border-radius: 20px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.booking-icon {
+  font-size: 2.5rem;
+}
+
+.booking-text {
+  flex: 1;
+}
+
+.booking-text h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 5px;
+}
+
+.booking-text p {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+}
+
+.recent-rides h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.recent-ride-card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.ride-icon {
+  font-size: 2rem;
+}
+
+.ride-info {
+  flex: 1;
+}
+
+.ride-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0 0 3px;
+}
+
+.ride-route {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ride-status {
+  text-align: right;
+}
+
+.ride-status .status {
+  display: block;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.ride-status .status.completed {
+  background: #e6f5e6;
+  color: #00aa00;
+}
+
+.ride-status .rating {
+  font-size: 0.85rem;
+  color: #ffa500;
+  font-weight: 700;
+}
+
+/* Map & Tracking */
+.tracking-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.tracking-map {
+  height: 45vh;
+  background: linear-gradient(135deg, #1a5c1a 0%, #2d8a2d 50%, #3da83d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.tracking-map.emergency-map {
+  background: linear-gradient(135deg, #8b0000 0%, #cc1100 50%, #e61515 100%);
+}
+
+.map-roads {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.road {
+  position: absolute;
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
+
+.road-1 {
+  width: 60%;
+  height: 4px;
+  top: 50%;
+  left: 10%;
+  transform: rotate(-15deg);
+}
+
+.road-2 {
+  width: 40%;
+  height: 4px;
+  top: 35%;
+  left: 40%;
+  transform: rotate(10deg);
+}
+
+.road-3 {
+  width: 30%;
+  height: 4px;
+  top: 65%;
+  left: 30%;
+  transform: rotate(5deg);
+}
+
+.map-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.pickup-marker {
+  position: absolute;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  animation: drive 3s ease-in-out infinite;
+}
+
+@keyframes drive {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.destination-marker {
+  position: absolute;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+}
+
+.emergency-overlay {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #cc1100;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 700;
+  animation: pulse-emergency 1.5s infinite;
+  z-index: 20;
+}
+
+/* Emergency Screen */
+.emergency-screen {
+  padding: 20px;
+}
+
+.emergency-screen .btn-back {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.emergency-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.emergency-pulse {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  animation: pulse-emergency 1s infinite;
+}
+
+.emergency-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #cc1100;
+  margin-bottom: 8px;
+}
+
+.emergency-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.emergency-types {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.emergency-type-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  border: 2px solid #eee;
+  transition: all 0.2s;
+}
+
+.emergency-type-card:hover {
+  border-color: #cc1100;
+}
+
+.emergency-type-card.selected {
+  border-color: #cc1100;
+  background: #fff8f8;
+}
+
+.emergency-type-card .emergency-icon {
+  font-size: 2.5rem;
+}
+
+.emergency-info {
+  flex: 1;
+}
+
+.emergency-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 4px;
+}
+
+.emergency-info p {
+  font-size: 0.85rem;
+  color: #00aa00;
+  margin: 0;
+  font-weight: 600;
+}
+
+.emergency-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #cc1100;
+}
+
+.emergency-details {
+  background: white;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.emergency-details h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.emergency-details input,
+.emergency-details textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.emergency-details input:focus,
+.emergency-details textarea:focus {
+  outline: none;
+  border-color: #cc1100;
+}
+
+.emergency-details textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.pickup-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.pickup-preview p {
+  flex: 1;
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.detect-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.emergency-dispatch-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #cc1100, #ff3333);
+  color: white;
+  border: none;
+  padding: 18px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: 14px;
+  cursor: pointer;
+  animation: pulse-emergency 2s infinite;
+}
+
+/* Emergency Tracking */
+.emergency-status-banner {
+  background: linear-gradient(135deg, #cc1100, #ff3333);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.emergency-status-banner .pulse-icon {
+  animation: pulse-emergency 1s infinite;
+}
+
+.emergency-call {
+  background: #cc1100 !important;
+}
+
+.emergency-time {
+  background: #fff8f8 !important;
+}
+
+.patient-info-card {
+  background: #fff8f8;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 15px;
+}
+
+.patient-info-card h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #cc1100;
+  margin: 0 0 10px;
+}
+
+.patient-info-card p {
+  margin: 5px 0;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.emergency-cancel {
+  border-color: #cc1100 !important;
+  color: #cc1100 !important;
+}
+
+/* Location Section */
+.location-section {
+  background: white;
+  border-radius: 24px 24px 0 0;
+  margin-top: -25px;
+  position: relative;
+  padding: 25px;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+}
+
+.pickup-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.pickup-dot {
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pickup-input input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.pickup-input input::placeholder {
+  color: #888;
+  font-weight: 400;
+}
+
+.pickup-input input:focus {
+  outline: none;
+}
+
+.gps-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.gps-btn:disabled {
+  opacity: 0.5;
+}
+
+.dropoff-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #f5f5f5;
+  border-radius: 12px;
+}
+
+.dropoff-dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dropoff-input input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: #333;
+}
+
+.dropoff-input input::placeholder {
+  color: #888;
+}
+
+.dropoff-input input:focus {
+  outline: none;
+}
+
+.location-error {
+  color: #cc1100;
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+/* Hospital List */
+.hospital-list {
+  padding: 15px 20px;
+}
+
+.hospital-list h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.hospital-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.hospital-item:hover {
+  background: #f8f8f8;
+}
+
+/* Quick Actions */
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.quick-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  background: #f8f8f8;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quick-action-btn:hover {
+  background: #f0f0f0;
+}
+
+.quick-action-icon {
+  font-size: 1.5rem;
+}
+
+.quick-action-btn span {
+  font-size: 0.65rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Ambulance Types */
+.ambulance-types-section {
+  padding: 20px;
+}
+
+.ambulance-types-section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.ambulance-types-grid {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+}
+
+.ambulance-types-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.ambulance-type-card {
+  min-width: 140px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+  text-align: center;
+}
+
+.ambulance-type-card:hover {
+  border-color: #ddd;
+}
+
+.ambulance-type-card.selected {
+  border-color: #000;
+  background: #fafafa;
+  box-shadow: 0 0 0 2px #000;
+}
+
+.type-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.ambulance-type-card h4 {
+  color: #333;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.capacity {
+  color: #666;
+  font-size: 0.7rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #000;
+  display: block;
+}
+
+/* Payment */
+.payment-section {
+  padding: 20px;
+}
+
+.payment-section h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.payment-options {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.payment-option.selected {
+  border-color: #000;
+  background: #fafafa;
+}
+
+.payment-option input {
+  display: none;
+}
+
+.payment-icon {
+  font-size: 1.3rem;
+}
+
+.payment-option span {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Confirm Button */
+.confirm-ride-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 15px 20px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.confirm-btn {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.confirm-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.confirm-price {
+  text-align: right;
+}
+
+.confirm-price .amount {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #000;
+  display: block;
+}
+
+.confirm-price .info {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+/* Emergency Float Button */
+.emergency-float-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background: linear-gradient(135deg, #cc1100, #ff3333);
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(204, 17, 0, 0.4);
+  z-index: 99;
+  animation: pulse-emergency 2s infinite;
+}
+
+/* Tracking Info */
+.tracking-info {
+  background: white;
+  border-radius: 24px 24px 0 0;
+  margin-top: -25px;
+  position: relative;
+  padding: 20px;
+}
+
+.tracking-driver {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.driver-avatar {
+  font-size: 2.8rem;
+  width: 65px;
+  height: 65px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.driver-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 4px;
+}
+
+.driver-info .rating {
+  color: #ffa500;
+  font-weight: 700;
+}
+
+.driver-info .vehicle {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.call-btn {
+  background: #00aa00;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: auto;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tracking-status {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.tracking-status h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.tracking-status p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.tracking-time {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.time-item {
+  text-align: center;
+}
+
+.time-item .label {
+  font-size: 0.75rem;
+  color: #666;
+  display: block;
+}
+
+.time-item .value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.tracking-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.share-btn {
+  flex: 1;
+  background: #000;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: white;
+  color: #cc0000;
+  border: 1px solid #cc0000;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Booking Screen */
+.booking-screen {
+  padding-bottom: 120px;
+}
+
+/* History */
+.history-header {
+  background: #000;
+  color: white;
+  padding: 20px;
+}
+
+.history-header h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.history-list {
+  padding: 20px;
+}
+
+.history-card {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.history-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.history-id {
+  background: #f5f5f5;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.history-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.history-status.completed {
+  background: #e6f5e6;
+  color: #00aa00;
+}
+
+.history-route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.route-icon {
+  font-size: 1.2rem;
+}
+
+.route-points {
+  flex: 1;
+}
+
+.route-points p {
+  margin: 3px 0;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.history-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.history-type {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.history-rating {
+  color: #ffa500;
+  font-weight: 700;
+}
+
+/* Rating Modal */
+.rating-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+.rating-modal {
+  background: white;
+  border-radius: 24px 24px 0 0;
+  padding: 30px 25px;
+  width: 100%;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.rating-modal h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.rating-driver {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rating-driver .avatar {
+  font-size: 3.5rem;
+}
+
+.rating-driver p {
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0 0;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.2s;
+}
+
+.star-btn.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.rating-modal textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  min-height: 80px;
+  resize: none;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+.rating-modal textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-skip {
+  flex: 1;
+  background: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-submit {
+  flex: 2;
+  background: #000;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Back Button */
+.btn-back {
+  background: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+}
+
+/* Complete Trip Button */
+.btn-complete-trip {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00aa00;
+  color: white;
+  border: none;
+  padding: 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.btn-complete-trip:hover {
+  background: #009900;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .quick-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .ambulance-type-card {
+    min-width: 120px;
+  }
+}

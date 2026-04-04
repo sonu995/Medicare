@@ -1,0 +1,747 @@
+.vc-page {
+    min-height: 100vh;
+    background: #0f172a;
+    padding-top: 80px;
+}
+
+.vc-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 1rem;
+}
+
+.vc-not-found a {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+
+/* ========================================
+   WAITING ROOM
+   ======================================== */
+
+.vc-waiting-room {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.vc-waiting-card {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.vc-doctor-preview {
+    margin-bottom: 2rem;
+}
+
+.vc-avatar-large {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto 1rem;
+}
+
+.vc-doctor-preview h2 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.vc-specialty {
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.vc-rating {
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+.vc-patient-info-form {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.vc-patient-info-form h3 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.vc-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.vc-info-item.full {
+    grid-column: 1 / -1;
+}
+
+.vc-info-item label {
+    display: block;
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.vc-info-item input,
+.vc-info-item textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.vc-info-item input:focus,
+.vc-info-item textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.vc-info-item textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.vc-waiting-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.vc-btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vc-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+}
+
+.vc-btn-secondary {
+    background: #f1f5f9;
+    color: #475569;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.vc-btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+.vc-btn-outline {
+    background: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+    padding: 0.875rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.vc-btn-outline:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+.vc-waiting-tips {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: left;
+}
+
+.vc-waiting-tips h4 {
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.vc-waiting-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vc-waiting-tips li {
+    color: #64748b;
+    font-size: 0.875rem;
+    padding: 0.35rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.vc-waiting-tips li::before {
+    content: "•";
+    color: #3b82f6;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ========================================
+   CONNECTING
+   ======================================== */
+
+.vc-connecting {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.vc-connecting-card {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.vc-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #e2e8f0;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.vc-connecting-card h2 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.vc-connecting-card p {
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+.vc-connection-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.vc-step {
+    padding: 0.75rem 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    color: #64748b;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vc-step.active {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.vc-step.active span {
+    color: #22c55e;
+}
+
+.vc-btn-cancel {
+    background: transparent;
+    color: #64748b;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* ========================================
+   CALL CONTAINER
+   ======================================== */
+
+.vc-call-container {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    background: #0f172a;
+}
+
+.vc-main-video {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vc-remote-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.vc-doctor-overlay {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vc-avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    border: 3px solid rgba(255,255,255,0.3);
+}
+
+.vc-doctor-name {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.vc-call-timer {
+    background: rgba(0,0,0,0.5);
+    color: #22c55e;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.vc-connection-quality {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vc-local-video-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.vc-local-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #1e293b;
+}
+
+.vc-video-off {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.vc-patient-panel {
+    position: absolute;
+    top: 20px;
+    left: 240px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    color: white;
+    max-width: 250px;
+}
+
+.vc-patient-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.vc-patient-header h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.vc-age {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.vc-symptoms {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* ========================================
+   CONTROLS
+   ======================================== */
+
+.vc-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+}
+
+.vc-control-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    background: #374151;
+    border: none;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background 0.2s, transform 0.2s;
+    min-width: 70px;
+}
+
+.vc-control-btn span {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.vc-control-btn:hover {
+    background: #4b5563;
+    transform: translateY(-2px);
+}
+
+.vc-control-btn.active {
+    background: #ef4444;
+}
+
+.vc-control-btn.vc-end-call {
+    background: #dc2626;
+}
+
+.vc-control-btn.vc-end-call:hover {
+    background: #b91c1c;
+}
+
+/* ========================================
+   CHAT PANEL
+   ======================================== */
+
+.vc-chat-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: calc(100vh - 80px);
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.2);
+}
+
+.vc-chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.vc-chat-header h3 {
+    margin: 0;
+    color: #1e293b;
+}
+
+.vc-chat-header button {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.vc-chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.vc-message {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+
+.vc-message.doctor {
+    align-self: flex-start;
+}
+
+.vc-message.patient {
+    align-self: flex-end;
+}
+
+.vc-message-bubble {
+    padding: 0.75rem 1rem;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.vc-message.doctor .vc-message-bubble {
+    background: #f1f5f9;
+    color: #1e293b;
+    border-bottom-left-radius: 4px;
+}
+
+.vc-message.patient .vc-message-bubble {
+    background: #3b82f6;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.vc-message-time {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-top: 0.25rem;
+    padding: 0 0.25rem;
+}
+
+.vc-message.patient .vc-message-time {
+    text-align: right;
+}
+
+.vc-chat-input {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.vc-chat-input input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    font-size: 0.9rem;
+}
+
+.vc-chat-input input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.vc-chat-input button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.vc-chat-input button:hover {
+    background: #2563eb;
+}
+
+/* ========================================
+   CALL ENDED
+   ======================================== */
+
+.vc-call-ended {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.vc-ended-card {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.vc-ended-icon {
+    width: 80px;
+    height: 80px;
+    background: #22c55e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    margin: 0 auto 1.5rem;
+}
+
+.vc-ended-card h2 {
+    color: #1e293b;
+    margin-bottom: 2rem;
+}
+
+.vc-call-summary {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.vc-summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.vc-label {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.vc-value {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.vc-follow-up {
+    margin-bottom: 1.5rem;
+}
+
+.vc-follow-up h3 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.vc-follow-up-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.vc-prescription-note {
+    background: #fef3c7;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #92400e;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .vc-local-video-container {
+        width: 120px;
+        height: 90px;
+    }
+    
+    .vc-patient-panel {
+        display: none;
+    }
+    
+    .vc-controls {
+        gap: 0;
+        padding: 0.75rem 1rem;
+    }
+    
+    .vc-control-btn {
+        min-width: 50px;
+        padding: 0.5rem;
+    }
+    
+    .vc-chat-panel {
+        width: 100%;
+    }
+}
