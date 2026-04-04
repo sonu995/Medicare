@@ -77,7 +77,8 @@ function AppContent() {
 
         if (isInitial && docsRes.data.length === 0) {
           console.log('No data found, seeding...')
-          await axios.post('http://localhost:5001/api/seed?force=true')
+          const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5001/api'
+          await axios.post(`${API_BASE}/seed?force=true`)
           window.location.reload()
           return
         }

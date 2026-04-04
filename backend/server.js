@@ -6,7 +6,8 @@ const cors = require('cors')
 const app = express()
 
 // Middleware
-app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:3000'], credentials: true }))
+const allowedOrigins = ['http://localhost:5173', 'http://localhost:3000', process.env.FRONTEND_URL].filter(Boolean)
+app.use(cors({ origin: allowedOrigins, credentials: true }))
 app.use(express.json())
 
 // Routes
