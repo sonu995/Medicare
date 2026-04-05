@@ -1,6 +1,6 @@
 services:
   - type: web
-      plan: free
+    plan: free
     name: medicare-backend
     env: node
     rootDir: backend
